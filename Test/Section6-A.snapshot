@@ -1,0 +1,319 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "externalControllerServices" : { },
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ {
+            "x" : 1033.0,
+            "y" : 360.0
+          }, {
+            "x" : 888.0,
+            "y" : 288.0
+          } ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "88635b40-aa30-322c-8d58-3cb93c6787b2",
+            "id" : "084b4a14-7001-3fe1-bde4-ff5ff46ae177",
+            "name" : "ExecuteStreamCommand",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "88635b40-aa30-322c-8d58-3cb93c6787b2",
+          "identifier" : "d6e366bb-1b70-3bb4-b9f9-921e72bcc4d2",
+          "labelIndex" : 2,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "88635b40-aa30-322c-8d58-3cb93c6787b2",
+            "id" : "baa996ab-0368-37ad-879d-a6c2b4f9f846",
+            "name" : "GenerateFlowFile",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "88635b40-aa30-322c-8d58-3cb93c6787b2",
+            "id" : "a6614ba1-a97e-33de-a605-7554ee62e28d",
+            "name" : "UpdateCounter",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "88635b40-aa30-322c-8d58-3cb93c6787b2",
+          "identifier" : "fef70e22-809a-3346-bcc7-75e267a79881",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "output stream", "original", "nonzero status" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "88635b40-aa30-322c-8d58-3cb93c6787b2",
+            "id" : "084b4a14-7001-3fe1-bde4-ff5ff46ae177",
+            "name" : "ExecuteStreamCommand",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        } ],
+        "controllerServices" : [ ],
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "identifier" : "88635b40-aa30-322c-8d58-3cb93c6787b2",
+        "inputPorts" : [ ],
+        "labels" : [ ],
+        "name" : "Section6",
+        "outputPorts" : [ ],
+        "parameterContextName" : "DataLake",
+        "position" : {
+          "x" : 328.0,
+          "y" : 112.0
+        },
+        "processGroups" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ "success" ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.12.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "88635b40-aa30-322c-8d58-3cb93c6787b2",
+          "identifier" : "a6614ba1-a97e-33de-a605-7554ee62e28d",
+          "name" : "UpdateCounter",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 312.0,
+            "y" : 312.0
+          },
+          "properties" : {
+            "counter-name" : "PeopleCounter",
+            "delta" : "1"
+          },
+          "propertyDescriptors" : {
+            "counter-name" : {
+              "displayName" : "Counter Name",
+              "identifiesControllerService" : false,
+              "name" : "counter-name",
+              "sensitive" : false
+            },
+            "delta" : {
+              "displayName" : "Delta",
+              "identifiesControllerService" : false,
+              "name" : "delta",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.UpdateCounter",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.12.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "88635b40-aa30-322c-8d58-3cb93c6787b2",
+          "identifier" : "baa996ab-0368-37ad-879d-a6c2b4f9f846",
+          "name" : "GenerateFlowFile",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 872.0,
+            "y" : 40.0
+          },
+          "properties" : {
+            "character-set" : "UTF-8",
+            "File Size" : "0B",
+            "Batch Size" : "1",
+            "Unique FlowFiles" : "false",
+            "Data Format" : "Text"
+          },
+          "propertyDescriptors" : {
+            "character-set" : {
+              "displayName" : "Character Set",
+              "identifiesControllerService" : false,
+              "name" : "character-set",
+              "sensitive" : false
+            },
+            "File Size" : {
+              "displayName" : "File Size",
+              "identifiesControllerService" : false,
+              "name" : "File Size",
+              "sensitive" : false
+            },
+            "mime-type" : {
+              "displayName" : "Mime Type",
+              "identifiesControllerService" : false,
+              "name" : "mime-type",
+              "sensitive" : false
+            },
+            "generate-ff-custom-text" : {
+              "displayName" : "Custom Text",
+              "identifiesControllerService" : false,
+              "name" : "generate-ff-custom-text",
+              "sensitive" : false
+            },
+            "Batch Size" : {
+              "displayName" : "Batch Size",
+              "identifiesControllerService" : false,
+              "name" : "Batch Size",
+              "sensitive" : false
+            },
+            "Unique FlowFiles" : {
+              "displayName" : "Unique FlowFiles",
+              "identifiesControllerService" : false,
+              "name" : "Unique FlowFiles",
+              "sensitive" : false
+            },
+            "Data Format" : {
+              "displayName" : "Data Format",
+              "identifiesControllerService" : false,
+              "name" : "Data Format",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "60 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.12.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 0,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "88635b40-aa30-322c-8d58-3cb93c6787b2",
+          "identifier" : "084b4a14-7001-3fe1-bde4-ff5ff46ae177",
+          "name" : "ExecuteStreamCommand",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 352.0,
+            "y" : 48.0
+          },
+          "properties" : {
+            "argumentsStrategy" : "Command Arguments Property",
+            "Max Attribute Length" : "256",
+            "Command Path" : "/home/nifi/workspace/section6/.venv/bin/python3",
+            "Argument Delimiter" : ";",
+            "Ignore STDIN" : "true",
+            "Command Arguments" : "/home/nifi/workspace/section6/loadcsv-v2.py;#{data_lake}"
+          },
+          "propertyDescriptors" : {
+            "argumentsStrategy" : {
+              "displayName" : "Command Arguments Strategy",
+              "identifiesControllerService" : false,
+              "name" : "argumentsStrategy",
+              "sensitive" : false
+            },
+            "Max Attribute Length" : {
+              "displayName" : "Max Attribute Length",
+              "identifiesControllerService" : false,
+              "name" : "Max Attribute Length",
+              "sensitive" : false
+            },
+            "Command Path" : {
+              "displayName" : "Command Path",
+              "identifiesControllerService" : false,
+              "name" : "Command Path",
+              "sensitive" : false
+            },
+            "Working Directory" : {
+              "displayName" : "Working Directory",
+              "identifiesControllerService" : false,
+              "name" : "Working Directory",
+              "sensitive" : false
+            },
+            "Output Destination Attribute" : {
+              "displayName" : "Output Destination Attribute",
+              "identifiesControllerService" : false,
+              "name" : "Output Destination Attribute",
+              "sensitive" : false
+            },
+            "Argument Delimiter" : {
+              "displayName" : "Argument Delimiter",
+              "identifiesControllerService" : false,
+              "name" : "Argument Delimiter",
+              "sensitive" : false
+            },
+            "Ignore STDIN" : {
+              "displayName" : "Ignore STDIN",
+              "identifiesControllerService" : false,
+              "name" : "Ignore STDIN",
+              "sensitive" : false
+            },
+            "Command Arguments" : {
+              "displayName" : "Command Arguments",
+              "identifiesControllerService" : false,
+              "name" : "Command Arguments",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "EVENT_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.ExecuteStreamCommand",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      },
+      "flowEncodingVersion" : "1.0",
+      "parameterContexts" : {
+        "DataLake" : {
+          "name" : "DataLake",
+          "parameters" : [ {
+            "description" : "",
+            "name" : "data_lake",
+            "sensitive" : false,
+            "value" : "/home/nifi/workspace/data_lake"
+          } ]
+        }
+      }
+    }
+  }
+}

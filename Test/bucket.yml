@@ -1,0 +1,6 @@
+flows:
+  224d2751-18b2-4d4c-a131-79b11266e8c0: {ver: 1, file: Section6-A.snapshot, comments: '',
+    author: anonymous, created: 1618775251297, flowName: Section6-A, flowDesc: data
+      ETL 2}
+layoutVer: 1
+bucketId: dc315d40-3f86-4b90-8175-5bba3418bca4
