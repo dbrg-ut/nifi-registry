@@ -44,6 +44,35 @@
           "bends" : [ ],
           "componentType" : "CONNECTION",
           "destination" : {
+            "groupId" : "2df053e4-7f9c-383c-bf32-a9758e1b35ac",
+            "id" : "4c52fff7-7a88-3602-92ff-caded92031b4",
+            "name" : "Test",
+            "type" : "OUTPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "2df053e4-7f9c-383c-bf32-a9758e1b35ac",
+          "identifier" : "ffa891ab-e962-3784-82cf-71ed46dcee92",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "2df053e4-7f9c-383c-bf32-a9758e1b35ac",
+            "id" : "a1f197c3-67b0-35c8-95ca-932119329558",
+            "name" : "Pass",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
             "comments" : "",
             "groupId" : "2df053e4-7f9c-383c-bf32-a9758e1b35ac",
             "id" : "d85300d4-d8c4-34f9-90c3-59766e428959",
@@ -230,7 +259,19 @@
         "inputPorts" : [ ],
         "labels" : [ ],
         "name" : "Section6-B",
-        "outputPorts" : [ ],
+        "outputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "componentType" : "OUTPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "2df053e4-7f9c-383c-bf32-a9758e1b35ac",
+          "identifier" : "4c52fff7-7a88-3602-92ff-caded92031b4",
+          "name" : "Test",
+          "position" : {
+            "x" : 1154.5636059065905,
+            "y" : 1200.8319727538692
+          },
+          "type" : "OUTPUT_PORT"
+        } ],
         "parameterContextName" : "DataLake",
         "position" : {
           "x" : 888.0,
@@ -498,7 +539,7 @@
           "type" : "org.apache.nifi.processors.standard.ExecuteStreamCommand",
           "yieldDuration" : "1 sec"
         }, {
-          "autoTerminatedRelationships" : [ "success", "failure" ],
+          "autoTerminatedRelationships" : [ "failure" ],
           "bulletinLevel" : "WARN",
           "bundle" : {
             "artifact" : "nifi-standard-nar",

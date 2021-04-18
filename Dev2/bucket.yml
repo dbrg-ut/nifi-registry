@@ -1,6 +1,6 @@
 flows:
-  2757721a-78cb-4f03-abc7-93829c699b57: {ver: 1, file: Section6-B.snapshot, comments: '',
-    author: anonymous, created: 1618775683897, flowName: Section6-B, flowDesc: A Sample
-      Flow}
+  2757721a-78cb-4f03-abc7-93829c699b57: {ver: 2, file: Section6-B.snapshot, comments: Test
+      Port Added, author: anonymous, created: 1618775764879, flowName: Section6-B,
+    flowDesc: A Sample Flow}
 layoutVer: 1
 bucketId: dfd2ea1c-8e22-489d-b5fe-47fd8e99c8fe
