@@ -74,6 +74,35 @@
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "groupId" : "88635b40-aa30-322c-8d58-3cb93c6787b2",
+            "id" : "44308f20-b8e6-3f4a-9a7e-51da49437008",
+            "name" : "Test",
+            "type" : "OUTPUT_PORT"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "88635b40-aa30-322c-8d58-3cb93c6787b2",
+          "identifier" : "7545baf5-d586-3f98-ab05-3c461a1f5b87",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "88635b40-aa30-322c-8d58-3cb93c6787b2",
+            "id" : "a6614ba1-a97e-33de-a605-7554ee62e28d",
+            "name" : "UpdateCounter",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
         } ],
         "controllerServices" : [ ],
         "flowFileConcurrency" : "UNBOUNDED",
@@ -83,7 +112,19 @@
         "inputPorts" : [ ],
         "labels" : [ ],
         "name" : "Section6",
-        "outputPorts" : [ ],
+        "outputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "componentType" : "OUTPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "88635b40-aa30-322c-8d58-3cb93c6787b2",
+          "identifier" : "44308f20-b8e6-3f4a-9a7e-51da49437008",
+          "name" : "Test",
+          "position" : {
+            "x" : 408.0,
+            "y" : 517.0
+          },
+          "type" : "OUTPUT_PORT"
+        } ],
         "parameterContextName" : "DataLake",
         "position" : {
           "x" : 328.0,
@@ -91,7 +132,7 @@
         },
         "processGroups" : [ ],
         "processors" : [ {
-          "autoTerminatedRelationships" : [ "success" ],
+          "autoTerminatedRelationships" : [ ],
           "bulletinLevel" : "WARN",
           "bundle" : {
             "artifact" : "nifi-standard-nar",
